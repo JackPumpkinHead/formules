@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Formules</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Введите, пожалуйста, данные: </h1>
+        <div class="wrapper-input">
+            <div class="input-block">
+                <div class="title">Преломляющая сила слабого меридиана роговицы</div>
+                <div>
+                    <input id="PWM_first">
+                    <input id="PWM_second">
+                </div>
+            </div>
+            
+            <div class="input-block">
+                <div class="title">Преломляющая сила сильного меридиана роговицы</div>
+                <div>
+                    <input id="PSM_first">
+                    <input id="PSM_second">
+                </div>
+            </div>
+            
+            <div class="input-block">
+                <div class="title">Длина переднезадней оси</div>
+                <div>
+                    <input id="L_first">
+                    <input id="L_second">
+                </div>
+            </div>
+    
+            <div class="input-block">
+                <div class="title">Глубина передней камеры</div>
+                <div>
+                    <input id="depth_front_camera_first">
+                    <input id="depth_front_camera_second">
+                </div>
+            </div>
+    
+            <div class="input-block">
+                <div class="title">Оптическая сила ИОЛ</div>
+                <div>
+                    <input id="IOL_first">
+                    <input id="IOL_second">
+                </div>
+            </div>
+    
+            <div class="input-block">
+                <div class="title">Неоптимизированная А-константа</div>
+                <div>
+                    <input id="A_not_optimize_first">
+                    <input id="A_not_optimize_second">
+                </div>
+            </div>
+        </div>
+
+        <h1>Результат: </h1>
+        <div class="wrapper-output">    
+            <div class="output-block">
+                <div>Средняя преломляющая сила роговицы</div>
+                <div>
+                    <input id="K_first">
+                    <input id="K_second">
+                </div>
+            </div>
+            
+            <div class="output-block">
+                <div>r</div>
+                <div>
+                    <input id="r_first">
+                    <input id="r_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>Lcor</div>
+                <div>
+                    <input id="Lcor_first">
+                    <input id="Lcor_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>C<sub>w</sub></div>
+                <div>
+                    <input id="Cw_first">
+                    <input id="Cw_second">
+                </div> 
+            </div>
+    
+            <div class="output-block">
+                <div>H</div>
+                <div>
+                    <input id="H_first">
+                    <input id="H_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>ACDconst</div>
+                <div>
+                    <input id="ACDconst_first">
+                    <input id="ACDconst_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>Offset</div>
+                <div>
+                    <input id="Offset_first">
+                    <input id="Offset_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>ACDest</div>
+                <div>
+                    <input id="ACDest_first">
+                    <input id="ACDest_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>RETHICK</div>
+                <div>
+                    <input id="RETHICK_first">
+                    <input id="RETHICK_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>LOPT</div>
+                <div>
+                    <input id="LOPT_first">
+                    <input id="LOPT_second">
+                </div>
+            </div>
+
+            <div class="output-block">
+                <div>Оптимизированная А-константа</div>
+                <div>
+                    <input id="A_optimize_first">
+                    <input id="A_optimize_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>Расчетная рефракция</div>
+                <div>
+                    <input id="IOLamet_first">
+                    <input id="IOLamet_second">
+                </div>
+            </div>
+    
+            <div class="output-block">
+                <div>Оптимизированная рефракция SRK/T</div>
+                <div>
+                    <input id="REFX_first">
+                    <input id="REFX_second">
+                </div>
+            </div>
+    
+        </div>
+        
+        
+
+    </div>
+    <!-- <input id="give_me_result" type="button" value="Вывести результат" onclick="addition()"> -->
+    <button id="give_me_result" onclick="addition()">Вывести результат</button>
+</body>
+</html>
