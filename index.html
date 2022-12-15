@@ -12,169 +12,169 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1>Введите, пожалуйста, данные: </h1>
+        
         <div class="wrapper-input">
+            <h1>Введите, пожалуйста, данные: </h1>
             <div class="input-block">
                 <div class="title">Преломляющая сила слабого меридиана роговицы</div>
                 <div>
-                    <input id="PWM_first">
-                    <input id="PWM_second">
+                    <input id="PWM">
                 </div>
             </div>
             
             <div class="input-block">
                 <div class="title">Преломляющая сила сильного меридиана роговицы</div>
                 <div>
-                    <input id="PSM_first">
-                    <input id="PSM_second">
+                    <input id="PSM">
                 </div>
             </div>
             
             <div class="input-block">
                 <div class="title">Длина переднезадней оси</div>
                 <div>
-                    <input id="L_first">
-                    <input id="L_second">
+                    <input id="L">
                 </div>
             </div>
     
             <div class="input-block">
                 <div class="title">Глубина передней камеры</div>
                 <div>
-                    <input id="depth_front_camera_first">
-                    <input id="depth_front_camera_second">
+                    <input id="depth_front_camera">
                 </div>
             </div>
     
             <div class="input-block">
                 <div class="title">Оптическая сила ИОЛ</div>
                 <div>
-                    <input id="IOL_first">
-                    <input id="IOL_second">
+                    <input id="IOL">
                 </div>
             </div>
     
             <div class="input-block">
                 <div class="title">Неоптимизированная А-константа</div>
                 <div>
-                    <input id="A_not_optimize_first">
-                    <input id="A_not_optimize_second">
+                    <input id="A_not_optimize">
+                </div>
+            </div>
+
+            <div class="input-block">
+                <div class="title">Сферический компонент послеоперационной рефракции</div>
+                <div>
+                    <input id="spherical">
+                </div>
+            </div>
+
+            <div class="input-block">
+                <div class="title">Цилиндрический компонент послеоперационной рефракции</div>
+                <div>
+                    <input id="cylindrical">
                 </div>
             </div>
         </div>
 
-        <h1>Результат: </h1>
+        
         <div class="wrapper-output">    
+            <h1>Результат: </h1>
+
+            <div class="output-block">
+                <div>Оптимизированная А-константа</div>
+                <div>
+                    <input id="A_optimize">
+                </div>
+            </div>
+
             <div class="output-block">
                 <div>Средняя преломляющая сила роговицы</div>
                 <div>
-                    <input id="K_first">
-                    <input id="K_second">
+                    <input id="K">
                 </div>
             </div>
             
             <div class="output-block">
                 <div>r</div>
                 <div>
-                    <input id="r_first">
-                    <input id="r_second">
+                    <input id="r">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>Lcor</div>
                 <div>
-                    <input id="Lcor_first">
-                    <input id="Lcor_second">
+                    <input id="Lcor">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>C<sub>w</sub></div>
                 <div>
-                    <input id="Cw_first">
-                    <input id="Cw_second">
+                    <input id="Cw">
                 </div> 
             </div>
     
             <div class="output-block">
                 <div>H</div>
                 <div>
-                    <input id="H_first">
-                    <input id="H_second">
+                    <input id="H">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>ACDconst</div>
                 <div>
-                    <input id="ACDconst_first">
-                    <input id="ACDconst_second">
+                    <input id="ACDconst">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>Offset</div>
                 <div>
-                    <input id="Offset_first">
-                    <input id="Offset_second">
+                    <input id="Offset">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>ACDest</div>
                 <div>
-                    <input id="ACDest_first">
-                    <input id="ACDest_second">
+                    <input id="ACDest">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>RETHICK</div>
                 <div>
-                    <input id="RETHICK_first">
-                    <input id="RETHICK_second">
+                    <input id="RETHICK">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>LOPT</div>
                 <div>
-                    <input id="LOPT_first">
-                    <input id="LOPT_second">
-                </div>
-            </div>
-
-            <div class="output-block">
-                <div>Оптимизированная А-константа</div>
-                <div>
-                    <input id="A_optimize_first">
-                    <input id="A_optimize_second">
+                    <input id="LOPT">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>Расчетная рефракция</div>
                 <div>
-                    <input id="IOLamet_first">
-                    <input id="IOLamet_second">
+                    <input id="IOLamet">
                 </div>
             </div>
     
             <div class="output-block">
                 <div>Оптимизированная рефракция SRK/T</div>
                 <div>
-                    <input id="REFX_first">
-                    <input id="REFX_second">
+                    <input id="REFX">
                 </div>
             </div>
     
         </div>
         
         
-
+            
+        
     </div>
     <!-- <input id="give_me_result" type="button" value="Вывести результат" onclick="addition()"> -->
-    <button id="give_me_result" onclick="addition()">Вывести результат</button>
+    <button id="give_me_result" style="height: 60px; width: 200px;" onclick="addition()">Вывести результат</button>
+    
 </body>
 </html>

@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .out {
@@ -10,7 +10,7 @@
 .wrapper-input,
 .wrapper-output {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     padding-bottom: 40px;
 }
@@ -28,8 +28,8 @@
 }
 
 .give_me_result {
-    width: 50px;
-    height: 20px;
+    width: 200px;
+    height: 60px;
     
 }
 
