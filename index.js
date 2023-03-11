@@ -15,9 +15,13 @@ function addition() {
 
     var depth_front_camera = Number(document.getElementById("depth_front_camera").value);
 
+    var IOL = Number(document.getElementById("IOL").value);
+
     var A_not_optimize = Number(document.getElementById("A_not_optimize").value);
 
-    var IOL = Number(document.getElementById("IOL").value);
+    var spherical = Number(document.getElementById("spherical").value);
+
+    var cylindrical = Number(document.getElementById("cylindrical").value);
 
     var K = (PWM + PSM) / 2;
 
@@ -28,6 +32,14 @@ function addition() {
     var Cw = -5.41 + 0.58412 * Lcor + 0.098 * K;
 
     var H = calcH(r, Cw);
+
+    var RETHICK = 0.65696 - 0.02029 * L;
+
+    var LOPT = L + RETHICK;
+
+    var after_operation = spherical + (1/2 * cylindrical);
+
+    var A_optimize = optimize(after_operation, V, r, ncml, IOL, na, LOPT)
     
     var ACDconst = 0.62467 * A_optimize - 68.747;
 
@@ -35,16 +47,14 @@ function addition() {
 
     var ACDest = H + Offset;
 
-    var RETHICK = 0.65696 - 0.02029 * L;
-
-    var LOPT = L + RETHICK;
-
-    var IOLemme = (1000 * na * (na * r - ncml * LOPT)) / ((LOPT - ACDest) * (na * r - ncml * ACDest));
-
     var REFX = (1000 * na * (na * r - ncml * LOPT) - IOL * (LOPT - ACDest) * (na * r - ncml * ACDest)) / 
         (na * (V * (na * r - ncml * LOPT) + LOPT * r) - 0.001 * IOL * (LOPT - ACDest) * (V * (na * r - ncml * ACDest) + ACDest * r));
-    
-    document.getElementById("{K}").value = K.toFixed(2);
+
+
+
+
+
+    document.getElementById("K").value = K.toFixed(2);
 
     document.getElementById("r").value = r.toFixed(8);
 
@@ -66,10 +76,14 @@ function addition() {
 
     document.getElementById("A_optimize").value = A_optimize;
 
+    document.getElementById("after_operation").value = after_operation;
+
     // document.getElementById("IOLemme_first").value = IOLemme_first.toFixed(1);
     // document.getElementById("IOLemme_second").value = IOLemme_second.toFixed(1);
 
     document.getElementById("REFX").value = REFX.toFixed(2);
+
+
 
 }
 
@@ -86,5 +100,34 @@ function checkLcor(L) {
 function calcH(r, Cw) {
     return r - Math.sqrt(r * r - ((Cw * Cw)/4));
 }
+
+function optimize (after_operation, V, r, ncml, IOL, na, LOPT) {
+    let FEFX = after_operation;
+    let a = - FEFX * ( r - V * ncml) - IOL * ncml;
+
+    let b = FEFX * (0.001 * IOL * V * na * r - 0.001 * LOPT * (r - V * ncml)) + IOL * LOPT * ncml + IOL * na * r;
+
+    let c = FEFX * (na * na * V * r - na * V * ncml * LOPT + na * LOPT * r - 0.001 * IOL * LOPT * V * na * r) -
+        1000 * na * na * r + 1000 * na * ncml * LOPT + IOL * LOPT * na * r;
+
+    return descriminant(a, b, c)
+
+}
+
+function descriminant(a, b, c,) {
+    var D = b * b - 4 * a * c;
+
+    var x1 = (-b + Math.sqrt(D)) / 2 * a;
+
+    var x2 = (-b - Math.sqrt(D)) / 2 * a;
+
+
+
+    if (x1 >= 0) return x1;
+    else return x2;
+
+}
+
+
 
 
