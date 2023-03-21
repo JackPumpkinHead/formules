@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Formules</title>
+    <title>Расчет характеристик ИОЛ</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        
+    <header class="page-header">
+        <div class="container header__container">
+            <svg class="logo header__logo" viewBox="0 0 164 76" role="img" aria-label="логотип онлайн калькулятора характеристик ИОЛ">
+                <use xlink:href="#logo" />
+            </svg>
+
+            <nav class="navigation header__navigation navigation_active">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#one" class="navigation__link">Главная</a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a href="#two" class="navigation__link">Калькулятор</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="header__consultation">Личный кабинет</button>
+        </div>
+    </header>
+
+    <section class="hero-image">
+        <div class="container">
+            <h1 class="heading">Онлайн калькулятор <br>для расчета характеристик ИОЛ</h1>
+            <p>Добро пожаловать!</p>
+        </div>
+    </section>
+
+    <section class="wrapper">
         <div class="wrapper-input">
             <h1>Введите, пожалуйста, данные: </h1>
             <div class="input-block">
@@ -70,6 +98,12 @@
                     <input id="cylindrical">
                 </div>
             </div>
+
+
+            <div class=button-wrapper">
+                <button class="button" onclick="addition()">Вывести результат</button>
+            </div>
+
         </div>
 
         
@@ -154,13 +188,6 @@
             </div>
     
             <div class="output-block">
-                <div>Расчетная рефракция</div>
-                <div>
-                    <input id="IOLamet">
-                </div>
-            </div>
-    
-            <div class="output-block">
                 <div>Оптимизированная рефракция SRK/T</div>
                 <div>
                     <input id="REFX">
@@ -175,13 +202,15 @@
             </div>
     
         </div>
-        
-        
-            
-        
-    </div>
-    <!-- <input id="give_me_result" type="button" value="Вывести результат" onclick="addition()"> -->
-    <button id="give_me_result" style="height: 60px; width: 200px;" onclick="addition()">Вывести результат</button>
-    
+
+    </section>
+
+    <footer class="page-footer">
+        <div class="container">
+            <a class="footer-email"
+               href="mailto:kostyu444enko.igor@gmail.com">kostyu444enko.igor@gmail.com</a>
+            <a class="footer-phone" href="tel:+79807424858">+7 980 742 48 58</a>
+        </div>
+    </footer>
 </body>
 </html>
