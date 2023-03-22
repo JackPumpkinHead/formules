@@ -12,7 +12,7 @@ body {
 }
 .page-header {
     margin: 0 0 160px;
-    padding: 32px 0 32px;
+    padding: 16px 0 16px;
     background-color: #00417d;
 }
 
@@ -81,6 +81,18 @@ body {
 .input-block,
 .output-block{
     padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 98%;
+
+}
+
+.block-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 48%;
 }
 
 .title {

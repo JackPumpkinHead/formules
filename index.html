@@ -13,9 +13,10 @@
 <body>
     <header class="page-header">
         <div class="container header__container">
-            <svg class="logo header__logo" viewBox="0 0 164 76" role="img" aria-label="логотип онлайн калькулятора характеристик ИОЛ">
-                <use xlink:href="#logo" />
-            </svg>
+<!--            <svg class="logo header__logo" viewBox="0 0 164 76" role="img" aria-label="логотип онлайн калькулятора характеристик ИОЛ">-->
+<!--                <use xlink:href="#logo" />-->
+<!--            </svg>-->
+            <img class="logo header__logo" src="img/eye.png" />
 
             <nav class="navigation header__navigation navigation_active">
                 <ul class="navigation__list">
@@ -43,58 +44,59 @@
     <section class="wrapper">
         <div class="wrapper-input">
             <h1>Введите, пожалуйста, данные: </h1>
+
             <div class="input-block">
-                <div class="title">Преломляющая сила слабого меридиана роговицы</div>
-                <div>
+                <div class="block-item">Преломляющая сила слабого меридиана роговицы</div>
+                <div class="block-item">
                     <input id="PWM">
                 </div>
             </div>
             
             <div class="input-block">
-                <div class="title">Преломляющая сила сильного меридиана роговицы</div>
-                <div>
+                <div class="block-item">Преломляющая сила сильного меридиана роговицы</div>
+                <div class="block-item">
                     <input id="PSM">
                 </div>
             </div>
             
             <div class="input-block">
-                <div class="title">Длина переднезадней оси</div>
-                <div>
+                <div class="block-item">Длина переднезадней оси</div>
+                <div class="block-item">
                     <input id="L">
                 </div>
             </div>
     
             <div class="input-block">
-                <div class="title">Глубина передней камеры</div>
-                <div>
+                <div class="block-item">Глубина передней камеры</div>
+                <div class="block-item">
                     <input id="depth_front_camera">
                 </div>
             </div>
     
             <div class="input-block">
-                <div class="title">Оптическая сила ИОЛ</div>
-                <div>
+                <div class="block-item">Оптическая сила ИОЛ</div>
+                <div class="block-item">
                     <input id="IOL">
                 </div>
             </div>
     
             <div class="input-block">
-                <div class="title">Неоптимизированная А-константа</div>
-                <div>
+                <div class="block-item">Неоптимизированная А-константа</div>
+                <div class="block-item">
                     <input id="A_not_optimize">
                 </div>
             </div>
 
             <div class="input-block">
-                <div class="title">Сферический компонент послеоперационной рефракции</div>
-                <div>
+                <div class="block-item">Сферический компонент послеоперационной рефракции</div>
+                <div class="block-item">
                     <input id="spherical">
                 </div>
             </div>
 
             <div class="input-block">
-                <div class="title">Цилиндрический компонент послеоперационной рефракции</div>
-                <div>
+                <div class="block-item">Цилиндрический компонент послеоперационной рефракции</div>
+                <div class="block-item">
                     <input id="cylindrical">
                 </div>
             </div>
@@ -111,98 +113,97 @@
             <h1>Результат: </h1>
 
             <div class="output-block">
-                <div>Оптимизированная А-константа</div>
-                <div>
+                <div class="block-item">Оптимизированная А-константа</div>
+                <div class="block-item">
                     <input id="A_optimize">
                 </div>
             </div>
 
             <div class="output-block">
-                <div>Средняя преломляющая сила роговицы</div>
-                <div>
+                <div class="block-item">Средняя преломляющая сила роговицы</div>
+                <div class="block-item">
                     <input id="K">
                 </div>
             </div>
             
             <div class="output-block">
-                <div>r</div>
-                <div>
+                <div class="block-item">r</div>
+                <div class="block-item">
                     <input id="r">
                 </div>
             </div>
     
             <div class="output-block">
-                <div>Lcor</div>
-                <div>
+                <div class="block-item">Lcor</div>
+                <div class="block-item">
                     <input id="Lcor">
                 </div>
             </div>
     
             <div class="output-block">
-                <div>C<sub>w</sub></div>
-                <div>
+                <div class="block-item">Cw</div>
+                <div class="block-item">
                     <input id="Cw">
                 </div> 
             </div>
     
             <div class="output-block">
-                <div>H</div>
-                <div>
+                <div class="block-item">H</div>
+                <div class="block-item">
                     <input id="H">
                 </div>
             </div>
     
             <div class="output-block">
-                <div>ACDconst</div>
-                <div>
+                <div class="block-item">ACDconst</div>
+                <div class="block-item">
                     <input id="ACDconst">
                 </div>
             </div>
     
             <div class="output-block">
-                <div>Offset</div>
-                <div>
+                <div class="block-item">Offset</div>
+                <div class="block-item">
                     <input id="Offset">
                 </div>
             </div>
     
             <div class="output-block">
-                <div>ACDest</div>
-                <div>
+                <div class="block-item">ACDest</div>
+                <div class="block-item">
                     <input id="ACDest">
                 </div>
             </div>
     
             <div class="output-block">
-                <div>RETHICK</div>
-                <div>
+                <div class="block-item">RETHICK</div>
+                <div class="block-item">
                     <input id="RETHICK">
                 </div>
             </div>
     
             <div class="output-block">
-                <div>LOPT</div>
-                <div>
+                <div class="block-item">LOPT</div>
+                <div class="block-item">
                     <input id="LOPT">
                 </div>
             </div>
     
             <div class="output-block">
-                <div>Оптимизированная рефракция SRK/T</div>
-                <div>
+                <div class="block-item">Оптимизированная рефракция SRK/T</div>
+                <div class="block-item">
                     <input id="REFX">
                 </div>
             </div>
 
             <div class="output-block">
-                <div>Послеоперационный сфероэквивалент</div>
-                <div>
+                <div class="block-item">Послеоперационный сфероэквивалент</div>
+                <div class="block-item">
                     <input id="after_operation">
                 </div>
             </div>
     
         </div>
-
     </section>
 
     <footer class="page-footer">
