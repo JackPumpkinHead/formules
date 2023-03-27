@@ -1,0 +1,19 @@
+{
+  "name": "formules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JackPumpkinHead/formules.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JackPumpkinHead/formules/issues"
+  },
+  "homepage": "https://github.com/JackPumpkinHead/formules#readme"
+}
